@@ -30,7 +30,6 @@ static std::string folder_root;
 static std::string folder_cuts= slh+"Cuts";
 static std::string folder_frames= slh+"frames";
 
-static jv_Palette palette;
 
 
 #if SDL_BYTEORDER == SDL_BIG_ENDIAN
