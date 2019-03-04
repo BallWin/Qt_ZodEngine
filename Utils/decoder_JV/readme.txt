@@ -37,3 +37,17 @@ streams to decode and load data. It is better to process the whole file. To do t
 --------------------------------------------------
 					BallWin
 
+Compile commands for example (copy-paste-run commands to terminal)
+- you do not need to enter comments %)
+==================================================
+// -- linced (make objects files .o)
+c++ -Wall -c jv_format.cpp
+c++ -Wall -c bitstream.cpp
+c++ -Wall -c video_proc.cpp
+c++ -Wall -c audio_proc.cpp
+c++ -Wall -c example_decode_jv.cpp
+// -- show files
+ls
+// -- build app
+c++ -o ExampleDecode example_decode_jv.o jv_format.o bitstream.o video_proc.o audio_proc.o  -lSDL -lSDL_image -lSDL_mixer
+
