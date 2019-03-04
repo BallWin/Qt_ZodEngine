@@ -181,7 +181,7 @@ private:
     // table labels JV chanks with audio data
     std::vector<St_Audio_Label>     _v_labels;
 
-    St_WAV_head     _wav_head_jv;       // general WAV header template for JVC file
+    St_WAV_head     _wav_head_jv;       // general WAV header - template for make wav parts
 
 };
 
