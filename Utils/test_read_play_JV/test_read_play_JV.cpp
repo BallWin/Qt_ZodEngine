@@ -27,7 +27,7 @@ extern "C"{
 }
 
 
-static bool flag_DEBUG_MODE= false;
+static bool flag_DEBUG_MODE= true;
 
 static std::string default_folder_data= "/../../Data";
 
