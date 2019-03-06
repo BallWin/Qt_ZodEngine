@@ -259,7 +259,7 @@ bool AudioWorker_JV::total_wav_buff(St_AData &dst, std::string *p_error)
             for( St_Audio_Label &label : _v_labels )
             {
                 sz_label= label.size_audio;
-                if( dst.size_data + sz_label <= sz ){
+                if( dst.size_data + sz_label <= sz_wav ){
                     memcpy(p_data + dst.size_data, label.ptr_audio_chunk.get(), sz_label);
                     dst.size_data += sz_label;
                 }
