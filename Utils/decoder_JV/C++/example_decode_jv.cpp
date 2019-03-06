@@ -173,7 +173,7 @@ int show_cut(VideoDecoder_JV &video_ch, AudioWorker_JV &audio_ch, long custom_fp
     // *********  audio initialize ****************
     // --------------------------------------------
     St_AData audio_data;
-    if( audio_ch.total_wav_buff(audio_data, &error) ){
+    if( !audio_ch.total_wav_buff(audio_data, &error) ){
         std::cerr<<"\n--<error>\t failed to get total sound!\n"<<error<<std::endl;
         return -1;
     }
