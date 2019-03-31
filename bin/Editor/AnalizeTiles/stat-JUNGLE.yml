@@ -7,6 +7,9 @@ Analize_Tiles_Map:
       - "JUNGLE2.bmp"
    Examined_levels:
       - LEVEL13
+      - LEVEL14
+      - LEVEL15
+      - LEVEL16
    Total_testure_tiles: 480
    Used_tiles: 403
    Info: { Tiles:

@@ -7,6 +7,9 @@ Analize_Tiles_Map:
       - "DESERT2.bmp"
    Examined_levels:
       - LEVEL01
+      - LEVEL02
+      - LEVEL03
+      - LEVEL04
    Total_testure_tiles: 480
    Used_tiles: 419
    Info: { Tiles:

@@ -7,6 +7,9 @@ Analize_Tiles_Map:
       - "VOLCAN2.bmp"
    Examined_levels:
       - LEVEL05
+      - LEVEL06
+      - LEVEL07
+      - LEVEL08
    Total_testure_tiles: 480
    Used_tiles: 422
    Info: { Tiles:

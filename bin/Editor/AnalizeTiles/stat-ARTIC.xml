@@ -5,7 +5,7 @@
   <Examined_textures>
     ARTIC.bmp ARTIC2.bmp</Examined_textures>
   <Examined_levels>
-    LEVEL09</Examined_levels>
+    LEVEL09 LEVEL10 LEVEL11 LEVEL12</Examined_levels>
   <Total_testure_tiles>480</Total_testure_tiles>
   <Used_tiles>407</Used_tiles>
   <Info><Tiles>

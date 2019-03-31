@@ -6,7 +6,10 @@
             "ARTIC2.bmp"
         ],
         "Examined_levels": [
-            "LEVEL09"
+            "LEVEL09",
+            "LEVEL10",
+            "LEVEL11",
+            "LEVEL12"
         ],
         "Total_testure_tiles": 480,
         "Used_tiles": 407,

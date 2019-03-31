@@ -5,7 +5,7 @@
   <Examined_textures>
     DESERT.bmp DESERT2.bmp</Examined_textures>
   <Examined_levels>
-    LEVEL01</Examined_levels>
+    LEVEL01 LEVEL02 LEVEL03 LEVEL04</Examined_levels>
   <Total_testure_tiles>480</Total_testure_tiles>
   <Used_tiles>419</Used_tiles>
   <Info><Tiles>

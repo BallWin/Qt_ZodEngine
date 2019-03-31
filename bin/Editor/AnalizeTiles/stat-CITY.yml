@@ -7,6 +7,9 @@ Analize_Tiles_Map:
       - "CITY2.bmp"
    Examined_levels:
       - LEVEL17
+      - LEVEL18
+      - LEVEL19
+      - LEVEL20
    Total_testure_tiles: 480
    Used_tiles: 401
    Info: { Tiles:

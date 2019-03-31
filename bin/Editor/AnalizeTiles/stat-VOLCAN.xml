@@ -5,7 +5,7 @@
   <Examined_textures>
     VOLCAN.bmp VOLCAN2.bmp</Examined_textures>
   <Examined_levels>
-    LEVEL05</Examined_levels>
+    LEVEL05 LEVEL06 LEVEL07 LEVEL08</Examined_levels>
   <Total_testure_tiles>480</Total_testure_tiles>
   <Used_tiles>422</Used_tiles>
   <Info><Tiles>
