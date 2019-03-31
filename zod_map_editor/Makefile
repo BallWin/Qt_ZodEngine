@@ -15,7 +15,7 @@ CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_NO_DEBUG -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -ffast-math -std=c++11 -Wall -O2 -I/usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.0 -I/usr/include/wx-3.0 -D_FILE_OFFSET_BITS=64 -DWXUSINGDLL -D__WXGTK__ -pthread -std=gnu++11 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I../include -I../../Q_ZodEngine -I/home/ballwin/Qt5/5.9.1/gcc_64/include -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore -Imocs -I/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -I../include -I../../GitHab_QtZodEngine -I/home/ballwin/Qt5/5.9.1/gcc_64/include -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore -Imocs -I/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/ballwin/Qt5/5.9.1/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -35,10 +35,10 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = zod_map_editor1.0.0
-DISTDIR = /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/zod_map_editor/objects/zod_map_editor1.0.0
+DISTDIR = /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/zod_map_editor/objects/zod_map_editor1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/home/ballwin/Qt5/5.9.1/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/ballwin/PROJECT/Games/Z/Q_ZodEngine/bin/lib -L/usr/lib/x86_64-linux-gnu -pthread -lwx_gtk2u_xrc-3.0 -lwx_gtk2u_html-3.0 -lwx_gtk2u_qa-3.0 -lwx_gtk2u_adv-3.0 -lwx_gtk2u_core-3.0 -lwx_baseu_xml-3.0 -lwx_baseu_net-3.0 -lwx_baseu-3.0 -lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -lmysqlclient -lGL -l_qZod_DnSeparate -l_qZod_DnMap -l_qZod_DnSoundEngine -l_qZod_DnSettings -l_qZod_DnGui -l_qZod_DnEffect -l_qZod_DnObjects -l_qZod_DnClientServer -L/home/ballwin/Qt5/5.9.1/gcc_64/lib -lQt5Core -lpthread 
+LIBS          = $(SUBLIBS) -L/home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/bin/lib -L/usr/lib/x86_64-linux-gnu -pthread -lwx_gtk2u_xrc-3.0 -lwx_gtk2u_html-3.0 -lwx_gtk2u_qa-3.0 -lwx_gtk2u_adv-3.0 -lwx_gtk2u_core-3.0 -lwx_baseu_xml-3.0 -lwx_baseu_net-3.0 -lwx_baseu-3.0 -lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -lmysqlclient -lGL -l_qZod_DnSeparate -l_qZod_DnMap -l_qZod_DnSoundEngine -l_qZod_DnSettings -l_qZod_DnGui -l_qZod_DnEffect -l_qZod_DnObjects -l_qZod_DnClientServer -L/home/ballwin/Qt5/5.9.1/gcc_64/lib -lQt5Core -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -211,6 +211,7 @@ DIST          = /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/spec_post.prf \
+		../.qmake.stash \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -401,6 +402,7 @@ Makefile: zod_map_editor.pro /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++/qm
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/spec_post.prf \
+		../.qmake.stash \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -581,6 +583,7 @@ Makefile: zod_map_editor.pro /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++/qm
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/qt_config.prf:
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/spec_post.prf:
+../.qmake.stash:
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/toolchain.prf:
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/default_pre.prf:
@@ -626,7 +629,6 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) $(TARGET) 
-	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 

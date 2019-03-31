@@ -4,5 +4,6 @@ SUBDIRS += \
     ZodEgine_Libs   \
     zod_engine      \
     q_zod_launcher  \
-    zod_map_editor
+    zod_map_editor \
+    Utils
 

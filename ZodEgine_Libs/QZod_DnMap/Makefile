@@ -15,7 +15,7 @@ CXX           = g++
 DEFINES       = -DQZOD_DNMAP_LIBRARY -DQT_DEPRECATED_WARNINGS -DQT_PLUGIN -DQT_CORE_LIB -DQT_QML_DEBUG
 CFLAGS        = -pipe -g -D_REENTRANT -Wall -W -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -ffast-math -std=c++11 -Wall -g -I/usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.0 -I/usr/include/wx-3.0 -D_FILE_OFFSET_BITS=64 -DWXUSINGDLL -D__WXGTK__ -pthread -std=gnu++11 -D_REENTRANT -Wall -W -fPIC $(DEFINES)
-INCPATH       = -I. -I../../include -I../../../Q_ZodEngine -I/home/ballwin/Qt5/5.9.1/gcc_64/include -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore -Imocs -I/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -I../../include -I../../../GitHab_QtZodEngine -I/home/ballwin/Qt5/5.9.1/gcc_64/include -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore -Imocs -I/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/ballwin/Qt5/5.9.1/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -35,10 +35,10 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = _qZod_DnMap1.0.0
-DISTDIR = /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/ZodEgine_Libs/QZod_DnMap/objects/_qZod_DnMap1.0.0
+DISTDIR = /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/ZodEgine_Libs/QZod_DnMap/objects/_qZod_DnMap1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/ballwin/Qt5/5.9.1/gcc_64/lib -shared
-LIBS          = $(SUBLIBS) -L/home/ballwin/PROJECT/Games/Z/Q_ZodEngine/bin/lib -L/usr/lib/x86_64-linux-gnu -pthread -lwx_gtk2u_xrc-3.0 -lwx_gtk2u_html-3.0 -lwx_gtk2u_qa-3.0 -lwx_gtk2u_adv-3.0 -lwx_gtk2u_core-3.0 -lwx_baseu_xml-3.0 -lwx_baseu_net-3.0 -lwx_baseu-3.0 -lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -lmysqlclient -lGL -l_qZod_DnSeparate -L/home/ballwin/Qt5/5.9.1/gcc_64/lib -lQt5Core -lpthread 
+LIBS          = $(SUBLIBS) -L/home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/bin/lib -L/usr/lib/x86_64-linux-gnu -pthread -lwx_gtk2u_xrc-3.0 -lwx_gtk2u_html-3.0 -lwx_gtk2u_qa-3.0 -lwx_gtk2u_adv-3.0 -lwx_gtk2u_core-3.0 -lwx_baseu_xml-3.0 -lwx_baseu_net-3.0 -lwx_baseu-3.0 -lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -lmysqlclient -lGL -l_qZod_DnSeparate -L/home/ballwin/Qt5/5.9.1/gcc_64/lib -lQt5Core -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -660,7 +660,7 @@ distclean: clean
 ####### Sub-libraries
 
 copyheaders:
-	mkdir -p /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; cp --parents qzod_dnmap.h /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; cp --parents qzod_dnmap_global.h /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; cp --parents qzod_map.h /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; cp --parents zmap_crater_graphics.h /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; cp --parents zmap_structures_old.h /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; cp --parents zteam.h /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; cp --parents finding/find_structures.h /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap; cp --parents finding/zpath_finding_old.h /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include/lib_qZod_DnMap;
+	mkdir -p /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; cp --parents qzod_dnmap.h /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; cp --parents qzod_dnmap_global.h /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; cp --parents qzod_map.h /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; cp --parents zmap_crater_graphics.h /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; cp --parents zmap_structures_old.h /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; cp --parents zteam.h /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; cp --parents finding/find_structures.h /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; mkdir -p /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap; cp --parents finding/zpath_finding_old.h /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include/lib_qZod_DnMap;
 
 mocclean: compiler_moc_header_clean compiler_moc_source_clean
 

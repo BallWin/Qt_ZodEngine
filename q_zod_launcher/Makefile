@@ -15,7 +15,7 @@ CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -ffast-math -O2 -std=gnu++11 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I../include -I../../Q_ZodEngine -I/home/ballwin/Qt5/5.9.1/gcc_64/include -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore -Imocs -isystem /usr/include/libdrm -Iuics -I/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -I../include -I../../GitHab_QtZodEngine -I/home/ballwin/Qt5/5.9.1/gcc_64/include -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore -Imocs -isystem /usr/include/libdrm -Iuics -I/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/ballwin/Qt5/5.9.1/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -35,10 +35,10 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = QZod_Launcher1.0.0
-DISTDIR = /home/ballwin/PROJECT/Games/Z/Q_ZodEngine/q_zod_launcher/objects/QZod_Launcher1.0.0
+DISTDIR = /home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/q_zod_launcher/objects/QZod_Launcher1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/home/ballwin/Qt5/5.9.1/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/ballwin/PROJECT/Games/Z/Q_ZodEngine/bin/lib -L/home/ballwin/Qt5/5.9.1/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/bin/lib -L/home/ballwin/Qt5/5.9.1/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -214,7 +214,7 @@ DIST          = /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
+		../.qmake.stash \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -409,7 +409,7 @@ Makefile: q_zod_launcher.pro /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++/qm
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
+		../.qmake.stash \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -594,7 +594,7 @@ Makefile: q_zod_launcher.pro /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++/qm
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/qt_config.prf:
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
+../.qmake.stash:
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/toolchain.prf:
 /home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/features/default_pre.prf:
@@ -646,7 +646,6 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) $(TARGET) 
-	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -800,7 +799,7 @@ mocs/moc_qz_launcher.cpp: /home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QDial
 		qz_launcher.h \
 		mocs/moc_predefs.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/bin/moc
-	/home/ballwin/Qt5/5.9.1/gcc_64/bin/moc $(DEFINES) --include ./mocs/moc_predefs.h -I/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++ -I/home/ballwin/PROJECT/Games/Z/Q_ZodEngine/q_zod_launcher -I/home/ballwin/PROJECT/Games/Z/Q_ZodEngine/include -I/home/ballwin/PROJECT/Games/Z/Q_ZodEngine -I/home/ballwin/Qt5/5.9.1/gcc_64/include -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include qz_launcher.h -o mocs/moc_qz_launcher.cpp
+	/home/ballwin/Qt5/5.9.1/gcc_64/bin/moc $(DEFINES) --include ./mocs/moc_predefs.h -I/home/ballwin/Qt5/5.9.1/gcc_64/mkspecs/linux-g++ -I/home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/q_zod_launcher -I/home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine/include -I/home/ballwin/PROJECT/Games/Z/GitHab_QtZodEngine -I/home/ballwin/Qt5/5.9.1/gcc_64/include -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui -I/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include qz_launcher.h -o mocs/moc_qz_launcher.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -1072,6 +1071,15 @@ objects/qz_launcher.o: qz_launcher.cpp qz_launcher.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore/QUrl \
 		uics/ui_qz_launcher.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QAction \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qaction.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui/qicon.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QCheckBox \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qcheckbox.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QComboBox \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qcombobox.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -1079,7 +1087,6 @@ objects/qz_launcher.o: qz_launcher.cpp qz_launcher.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui/qvalidator.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore/qregularexpression.h \
-		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui/qicon.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qslider.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qstyle.h \
@@ -1087,7 +1094,39 @@ objects/qz_launcher.o: qz_launcher.cpp qz_launcher.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qrubberband.h \
 		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore/qabstractitemmodel.h
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QFrame \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QGridLayout \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qgridlayout.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qlayout.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qboxlayout.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QGroupBox \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qgroupbox.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QHBoxLayout \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QHeaderView \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QLabel \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qlabel.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QLineEdit \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui/qtextcursor.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui/qtextformat.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui/qpen.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtGui/qtextoption.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QPushButton \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QRadioButton \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qradiobutton.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QSpacerItem \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QSplitter \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qsplitter.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QToolButton \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/qtoolbutton.h \
+		/home/ballwin/Qt5/5.9.1/gcc_64/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o objects/qz_launcher.o qz_launcher.cpp
 
 objects/moc_qz_launcher.o: mocs/moc_qz_launcher.cpp 
