@@ -175,9 +175,29 @@ LIBS += \
 ###########################
 ### post copy /include  ###
 ###########################
-for( name, HEADERS ){
-    copyheaders.commands += mkdir -p $${INSTALL_PATH_INCLUDE}/lib$${TARGET};
-    copyheaders.commands += cp --parents $$name $${INSTALL_PATH_INCLUDE}/lib$${TARGET};
+win32 {
+    HEADER_ROOT = $$shell_path($${INSTALL_PATH_INCLUDE}/lib$${TARGET})
+    HEADER_ROOT_QUOTED = $$shell_quote($$HEADER_ROOT)
+    copyheaders.commands = if not exist $$HEADER_ROOT_QUOTED mkdir $$HEADER_ROOT_QUOTED
+    for(name, HEADERS) {
+        HEADER_SOURCE = $$shell_path($$PWD/$$name)
+        HEADER_SOURCE_QUOTED = $$shell_quote($$HEADER_SOURCE)
+        HEADER_REL_DIR = $$dirname($$name)
+        HEADER_DEST = $$HEADER_ROOT
+        !isEmpty(HEADER_REL_DIR):!equals(HEADER_REL_DIR, .) {
+            HEADER_DEST = $$shell_path($${INSTALL_PATH_INCLUDE}/lib$${TARGET}/$$HEADER_REL_DIR)
+            HEADER_DEST_QUOTED = $$shell_quote($$HEADER_DEST)
+            copyheaders.commands += && if not exist $$HEADER_DEST_QUOTED mkdir $$HEADER_DEST_QUOTED
+        } else {
+            HEADER_DEST_QUOTED = $$HEADER_ROOT_QUOTED
+        }
+        copyheaders.commands += && copy /Y $$HEADER_SOURCE_QUOTED $$HEADER_DEST_QUOTED >NUL
+    }
+} else {
+    for(name, HEADERS) {
+        copyheaders.commands += mkdir -p $${INSTALL_PATH_INCLUDE}/lib$${TARGET};
+        copyheaders.commands += cp --parents $$name $${INSTALL_PATH_INCLUDE}/lib$${TARGET};
+    }
 }
 QMAKE_EXTRA_TARGETS += copyheaders
 POST_TARGETDEPS += copyheaders
